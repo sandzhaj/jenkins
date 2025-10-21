@@ -13,7 +13,9 @@ pipeline {
                 sh"""
                 set +x
                 echo "Имя приложения (APP_NAME) = $env.APP_NAME"
-                echo $SECTET_NEW
+                echo SECTET_NEW = $SECTET_NEW
+                echo "ALEX_CRED_USR = $ALEX_CRED_USR"
+                echo "ALEX_CRED_PSW = $ALEX_CRED_USR"
                 """
             
             }
