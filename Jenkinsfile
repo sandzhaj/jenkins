@@ -1,10 +1,21 @@
 pipeline {
     agent any
 
+    environment {
+        APP_NAME = 'my_app'
+        ALEX_CRED = credentials('alexcreds')
+        SECTET_NEW = credentials('secrettext')
+    }
+
     stages {
-        stage('Hello') {
+        stage('Переменные окружения') {
             steps {
-                echo 'Hello, World!'
+                sh"""
+                set +x
+                echo Имя приложения (APP_NAME) = $env.APP_NAME
+                echo $SECTET_NEW
+                """
+            
             }
         }
     }
