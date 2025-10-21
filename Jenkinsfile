@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh"""
                 set +x
-                echo Имя приложения (APP_NAME) = $env.APP_NAME
+                echo "Имя приложения (APP_NAME) = $env.APP_NAME"
                 echo $SECTET_NEW
                 """
             
