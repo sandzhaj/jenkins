@@ -17,7 +17,7 @@ pipeline {
     parameters {
         string(name: 'GIT_URL', defaultValue: '', description: '')
         booleanParam(name: 'BOOL', defaultValue: true, description: '')
-        choise(name: 'ENV', choices: ["dev", "test", "prod"], description: '')
+        choice(name: 'ENV', choices: ["dev", "test", "prod"], description: '')
     }
 
     stages {
